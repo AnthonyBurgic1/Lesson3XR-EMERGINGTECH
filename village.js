@@ -42,7 +42,7 @@ const createScene = async function() {
     // STEP 6b: ...or with a vector object
     box.position = new BABYLON.Vector3(0, 0.75, 0);
     // STEP 7: Rotate the box (Babylon.JS uses radians - so convert if you wish)
-    
+    box.rotation.y = new BABYLON.Tools.ToRadians(45);
     // STEP 11: Add a texture to the walls of the house (the box) (https://www.babylonjs-playground.com/textures/floor.png)
         
     // STEP 12a: Change the texture above to use an image with doors and windows instead
