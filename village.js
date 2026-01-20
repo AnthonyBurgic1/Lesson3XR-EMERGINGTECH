@@ -32,15 +32,15 @@ const createScene = async function() {
     // STEP 3b: Adjust the vertical position of the box (default box height is 1 size unit)
     vox.position.y = 0.75;
     // STEP 5a: Scale the box to resemble more of a house shape
-    box.scaling.x = 2;
-    box.scaling.y = 1.5;
-    box.scaling.z = 3;
+    //box.scaling.x = 2;
+    //box.scaling.y = 1.5;
+    //box.scaling.z = 3;
     // STEP 5b: ...or use a vector object to scale the box instead
     box.scaling = new BABYLON.Vector3(2, 1.5, 3);
     // STEP 6a: Repostion the box (which is now 1.5 units in height, so to sit on the ground, we need to raise y to 0.75)
     
     // STEP 6b: ...or with a vector object
-    
+    box.position = new BABYLON.Vector3(0, 0.75, 0);
     // STEP 7: Rotate the box (Babylon.JS uses radians - so convert if you wish)
     
     // STEP 11: Add a texture to the walls of the house (the box) (https://www.babylonjs-playground.com/textures/floor.png)
