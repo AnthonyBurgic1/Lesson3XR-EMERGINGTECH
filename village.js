@@ -62,6 +62,15 @@ const createScene = async function() {
     roof.rotation.z = BABYLON.Tools.ToRadians(-45);
     roof.position = new BABYLON.Vector3(0, 2.6, 0);
     // STEP 10: Add a texture to the roof (https://assets.babylonjs.com/environments/roof.jpg)
+    const roofMaterial = new BABYLON.StandardMaterial("roofMaterial", scene);
+    const roofTexture = new BABYLON.Texture("https://assets.babylonjs.com/environments/roof.jpg", scene);
+    roofMaterial.diffuseTexture = roofTexture;
+    roof.material = roofMaterial;
+    // STEP 9: Colour the Ground
+    const groundMaterial = new BABYLON.StandardMaterial("groundMaterial", scene);
+    groundMaterial.diffuseColor = new BABYLON.Color3(0.5, 0.8, 0.5); 
+    // Light green color \\ 
+    ground.material = groundMaterial;
 
     // STEP 13a: Let's combine the box and the roof meshes into one mesh called 'house'
     
