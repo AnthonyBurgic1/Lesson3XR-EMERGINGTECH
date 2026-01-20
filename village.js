@@ -34,8 +34,9 @@ const createScene = async function() {
     // STEP 5a: Scale the box to resemble more of a house shape
     box.scaling.x = 2;
     box.scaling.y = 1.5;
+    box.scaling.z = 3;
     // STEP 5b: ...or use a vector object to scale the box instead
-    
+    box.scaling = new BABYLON.Vector3(2, 1.5, 3);
     // STEP 6a: Repostion the box (which is now 1.5 units in height, so to sit on the ground, we need to raise y to 0.75)
     
     // STEP 6b: ...or with a vector object
