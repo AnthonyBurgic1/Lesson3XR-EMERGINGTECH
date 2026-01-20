@@ -24,15 +24,16 @@ const createScene = async function() {
        
 
     // STEP 2: Add a box to serve as a house
-    
+    const box = new BABYLON.MeshBuilder.CreateBox("box",
+        {size: 1});
     // STEP 12c: Change the above declaration to include a material wrap
     
 
     // STEP 3a: Preview the result - noticing that the box is sunk into the ground
     // STEP 3b: Adjust the vertical position of the box (default box height is 1 size unit)
-    
+    vox.position.y = 0.5;
     // STEP 5a: Scale the box to resemble more of a house shape
-    
+    box.scaling.x = 2;
     // STEP 5b: ...or use a vector object to scale the box instead
     
     // STEP 6a: Repostion the box (which is now 1.5 units in height, so to sit on the ground, we need to raise y to 0.75)
