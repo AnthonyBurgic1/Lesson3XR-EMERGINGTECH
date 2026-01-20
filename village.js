@@ -47,7 +47,10 @@ const createScene = async function() {
     // STEP 7: Rotate the box (Babylon.JS uses radians - so convert if you wish)
     box.rotation.y = BABYLON.Tools.ToRadians(45);
     // STEP 11: Add a texture to the walls of the house (the box) (https://www.babylonjs-playground.com/textures/floor.png)
-        
+       const boxMaterial = new BABYLON.StandardMaterial("boxMaterial", scene);
+    const boxTexture = new BABYLON.Texture("https://www.babylonjs-playground.com/textures/floor.png", scene);
+    boxMaterial.diffuseTexture = boxTexture;
+    box.material = boxMaterial; 
     // STEP 12a: Change the texture above to use an image with doors and windows instead
     
     // STEP 8a: Build a roof - using a cylinder mesh
