@@ -94,11 +94,20 @@ const createScene = async function() {
         }, audioEngine);
      }   
     // STEP 15a: Set the above createScene() function to async (important, or this will not work)
+    
     // STEP 15b: Create the xrHelper to allow the visitor to choose WebXR if they are able and they'd like
     // const xr = await scene.createDefaultXRExperienceAsync({
     //     floorMeshes: [ground],
     //     optionalFeatures: true
     // });
+    const xr = await scene.createDefaultXRExperienceAsync({
+        floorMeshes: [ground],
+        optionalFeatures: true
+    });
+
+    // Initialize audio
+    initAudio();
+    
 
     // Return the scene
     return scene;
