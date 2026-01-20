@@ -15,34 +15,37 @@ const createScene = async function() {
     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0));
     
     // STEP 1: Add a ground
-    const ground = new BABYLON.MeshBuilder.CreateGround("ground", 
-        {width: 20, height: 20}); 
+    const ground = new BABYLON.MeshBuilder.CreateGround("ground", {
+        width: 10,
+        height: 10
+    })
     // STEP 9: Colour the ground
     
+
     // STEP 12b: Add an array to position the image properly on each of the four visible sides (notice we will not set 4 and 5)
     //options parameter to set different images on each side
        
 
     // STEP 2: Add a box to serve as a house
-    const box = new BABYLON.MeshBuilder.CreateBox("box",{});
+    const box = new BABYLON.MeshBuilder.CreateBox("box", {});
     // STEP 12c: Change the above declaration to include a material wrap
     
 
     // STEP 3a: Preview the result - noticing that the box is sunk into the ground
     // STEP 3b: Adjust the vertical position of the box (default box height is 1 size unit)
-    vox.position.y = 0.75;
+    // box.position.y = 0.75;
     // STEP 5a: Scale the box to resemble more of a house shape
-    //box.scaling.x = 2;
-    //box.scaling.y = 1.5;
-    //box.scaling.z = 3;
+    // box.scaling.x = 2;
+    // box.scaling.y = 1.5;
+    // box.scaling.z = 3;
     // STEP 5b: ...or use a vector object to scale the box instead
     box.scaling = new BABYLON.Vector3(2, 1.5, 3);
-    // STEP 6a: Repostion the box (which is now 1.5 units in height, so to sit on the ground, we need to raise y to 0.75)
+    // STEP 6a: Reposition the box (which is now 1.5 units in height, so to sit on the ground, we need to raise y to 0.75)
     
     // STEP 6b: ...or with a vector object
     box.position = new BABYLON.Vector3(0, 0.75, 0);
     // STEP 7: Rotate the box (Babylon.JS uses radians - so convert if you wish)
-    box.rotation.y = new BABYLON.Tools.ToRadians(45);
+    box.rotation.y = BABYLON.Tools.ToRadians(45);
     // STEP 11: Add a texture to the walls of the house (the box) (https://www.babylonjs-playground.com/textures/floor.png)
         
     // STEP 12a: Change the texture above to use an image with doors and windows instead
