@@ -34,6 +34,7 @@ const createScene = async function() {
     vox.position.y = 0.5;
     // STEP 5a: Scale the box to resemble more of a house shape
     box.scaling.x = 2;
+    box.scaling.y = 1.5;
     // STEP 5b: ...or use a vector object to scale the box instead
     
     // STEP 6a: Repostion the box (which is now 1.5 units in height, so to sit on the ground, we need to raise y to 0.75)
